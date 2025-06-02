@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GameZone - Free Online Games</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- AdSense library -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2526866488902676"
+     crossorigin="anonymous"></script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background-color: #0e0e0e; color: #fff; }
+    header { background: linear-gradient(135deg, #0f0f0f, #1e1e1e); padding: 30px 20px; text-align: center; }
+    header h1 { color: #00ffd5; font-size: 2.5rem; }
+    header p { color: #aaa; font-size: 1.1rem; margin-top: 10px; }
+    nav { display: flex; justify-content: center; flex-wrap: wrap; background-color: #141414; padding: 15px; position: sticky; top: 0; z-index: 1000; }
+    nav a { color: #ccc; margin: 10px 15px; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: #00ffd5; }
+    .hero { background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d1?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover; height: 350px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; text-shadow: 2px 2px 10px #000; font-size: 2rem; padding: 20px; position: relative; }
+    .hero::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.5); z-index: 1; }
+    .hero h2 { position: relative; z-index: 2; }
+    .section { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+    .section h2 { font-size: 2rem; margin-bottom: 10px; color: #00ffd5; border-left: 5px solid #00ffd5; padding-left: 15px; }
+    .games-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    .game-card { background-color: #1a1a1a; border-radius: 12px; overflow: hidden; box-shadow: 0 0 15px rgba(0, 255, 213, 0.05); transition: transform 0.3s, box-shadow 0.3s; }
+    .game-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 255, 213, 0.15); }
+    .game-card iframe, .game-card img { width: 100%; height: 200px; object-fit: cover; border: none; }
+    .game-content { padding: 15px; }
+    .game-content h3 { margin-bottom: 10px; font-size: 1.2rem; color: #fff; }
+    .game-content p { font-size: 0.9rem; color: #aaa; }
+    .play-btn { margin-top: 10px; display: inline-block; padding: 8px 15px; background: #00ffd5; color: #000; border-radius: 25px; font-weight: bold; text-decoration: none; transition: background 0.3s; }
+    .play-btn:hover { background: #00c2a8; }
+    .search-filter { display: flex; justify-content: center; gap: 15px; margin: 40px auto; flex-wrap: wrap; }
+    .search-filter input, .search-filter select { padding: 10px; border-radius: 8px; border: none; font-size: 1rem; }
+    .login-box { text-align: center; padding: 20px; background-color: #141414; margin: 20px auto; max-width: 400px; border-radius: 12px; }
+    .login-box input { width: 90%; padding: 10px; margin: 10px 0; border-radius: 8px; border: none; }
+    .login-box button { padding: 10px 20px; background-color: #00ffd5; color: #000; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
+    .leaderboard { max-width: 600px; margin: 50px auto; background-color: #1a1a1a; border-radius: 12px; padding: 20px; }
+    .leaderboard h3 { color: #00ffd5; margin-bottom: 20px; text-align: center; }
+    .leaderboard ol { list-style: none; padding-left: 0; }
+    .leaderboard li { padding: 10px; border-bottom: 1px solid #333; display: flex; justify-content: space-between; color: #ccc; }
+    footer { background-color: #111; text-align: center; padding: 20px; font-size: 0.9rem; color: #666; margin-top: 50px; }
+    .ads-container { margin: 20px auto; max-width: 970px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>GameZone</h1>
+  <p>Play the Best Free Online Games – No Downloads, No Limits!</p>
+</header>
+
+<nav>
+  <a href="#shooting">Shooting</a>
+  <a href="#arcade">Arcade</a>
+  <a href="#parkour">Parkour</a>
+  <a href="#leaderboard">Leaderboard</a>
+</nav>
+
+<div class="hero">
+  <h2>Your Next Favorite Game Is Just One Click Away!</h2>
+</div>
+
+<!-- Main Ad below Hero -->
+<div class="ads-container">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-2526866488902676"
+       data-ad-slot="5629667366"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<div class="search-filter">
+  <input type="text" placeholder="Search games...">
+  <select>
+    <option value="all">All Categories</option>
+    <option value="shooting">Shooting</option>
+    <option value="arcade">Arcade</option>
+    <option value="parkour">Parkour</option>
+  </select>
+</div>
+
+<div class="login-box">
+  <h3>Login</h3>
+  <input type="text" placeholder="Username">
+  <input type="password" placeholder="Password">
+  <button>Login</button>
+</div>
+
+<section class="section" id="shooting">
+  <h2>🔫 Shooting Games</h2>
+  <!-- AdSense Ad below Shooting title -->
+  <div class="ads-container">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2526866488902676"
+         data-ad-slot="5629667366"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  <div class="games-grid">
+    <!-- Shooting games here -->
+  </div>
+</section>
+
+<section class="section" id="arcade">
+  <h2>🕹️ Arcade Games</h2>
+  <!-- AdSense Ad below Arcade title -->
+  <div class="ads-container">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2526866488902676"
+         data-ad-slot="5629667366"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  <div class="games-grid">
+    <!-- Arcade games here -->
+  </div>
+</section>
+
+<section class="section" id="parkour">
+  <h2>🏃‍♂️ Parkour Games</h2>
+  <!-- AdSense Ad below Parkour title -->
+  <div class="ads-container">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2526866488902676"
+         data-ad-slot="5629667366"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  <div class="games-grid">
+    <!-- Parkour games here -->
+  </div>
+</section>
+
+<!-- AdSense Ad above Leaderboard -->
+<div class="ads-container">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-2526866488902676"
+       data-ad-slot="5629667366"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<section class="leaderboard" id="leaderboard">
+  <h3>🏆 Top Players</h3>
+  <ol>
+    <li><span>PlayerOne</span><span>1500 pts</span></li>
+    <li><span>SpeedRunner</span><span>1300 pts</span></li>
+    <li><span>SharpShooter</span><span>1200 pts</span></li>
+    <li><span>ArcadeKing</span><span>1100 pts</span></li>
+    <li><span>JumpMaster</span><span>1050 pts</span></li>
+  </ol>
+</section>
+
+<footer>
+  &copy; 2025 GameZone. Powered by HTMLGames & Poki. Built for gamers, by gamers.
+</footer>
+
+</body>
+</html>
